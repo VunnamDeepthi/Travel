@@ -1,0 +1,20 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color: gainsboro;
+}
+
+.pic{
+
+     float:left;
+     width:33.33%;
+     padding:3px;
+}
+.pic h2{
+    margin-left: 80px;
+}
+.pic img{
+    width:300px;
+    height:250px;
+}

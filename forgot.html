@@ -1,0 +1,63 @@
+<html>
+<head>
+    <style>
+        body{
+    background-image:url(form.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+.signup-box{
+    top:30%;
+    width:400px;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color:white;
+    border-radius:3px;
+    height: 300px;
+}
+h1{
+    text-align:center;
+    padding-top:15px;
+}
+form label{
+    display:flex;
+    margin-top:20px;
+    font-size:18px;
+    margin-left: 10%;
+}
+form input{
+    width:80%;
+    padding:7px;
+    border:none;
+    border:1px solid gray;
+    border-radius:6px;
+    outline:none;
+    margin-left: 10%;
+}
+input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top:15px;
+    border:none;
+    background-color:rgb(17, 244, 244);
+}
+    </style>
+
+</head>
+<body>
+    <div class="signup-box">
+    <form method="post" action="forgot.jsp"><br><br>
+    <label>Email</label>
+    <input type="email" class="input-box" placeholder="enter your mail" name="email">
+    <label>New Password</label>
+    <input type="password" class="input-box" placeholder="enter your password" name="password">
+    <label>Password</label>
+    <input type="password" class="input-box" placeholder="confirm your password" name="confpassword">
+    <input type="submit" value="submit">
+    </div>
+    </form>
+</body> 
+</html>

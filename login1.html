@@ -1,0 +1,89 @@
+<head>
+    <style>
+        body{
+    background-image:url(form.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+.signup-box{
+    top:30%;
+    width:400px;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color:white;
+    border-radius:3px;
+    height: 300px;
+}
+h1{
+    text-align:center;
+    padding-top:15px;
+}
+form label{
+    display:flex;
+    margin-top:20px;
+    font-size:18px;
+    margin-left: 10%;
+}
+form input{
+    width:80%;
+    padding:7px;
+    border:none;
+    border:1px solid gray;
+    border-radius:6px;
+    outline:none;
+    margin-left: 10%;
+}
+.classinput{
+    width:80%;
+    padding:7px;
+    margin-left: 10%;
+}
+input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top:15px;
+    border:none;
+    background-color:rgb(17, 244, 244);
+}
+    </style>
+    <script>
+        function validation()
+        {
+            var email=document.login.mail.value;
+            var password=document.login.pasword.value;
+            if(email=="" || email=="null")
+            {
+                alert("please enter your mail");
+                 document.login.mail.focus();
+                 return false; 
+            }
+            else if(password==""|| password=="null")
+            {
+                alert("please enter the password");
+                document.login.pasword.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head><body>
+    <center>
+    <h2>Invalid User!! Please enter correct details</h2> 
+    </center>
+    <div class="signup-box">
+    <h1>Log in</h1>
+    <form method="post" action="Login.jsp" onsubmit="return validation();">
+        <label>Email</label>
+    <input type="email" class="input-box" placeholder="enter your mail" name="mail">
+    <label>Password</label>
+    <input type="password" class="input-box" placeholder="enter your password" name="password">
+    <input type="submit" value="Log in">
+    <div class="classinput" >
+         <a href="signup.html" style="color:black">Not Create One</a>&nbsp &nbsp &nbsp&nbsp&nbsp
+         <a href="forgot.html" style="color:black">Forgot Password</a></div>
+    </div>
+    </form>
+</body> 

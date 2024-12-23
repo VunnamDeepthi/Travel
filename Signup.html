@@ -1,0 +1,147 @@
+<head>
+    <style>
+        body{
+    background-image:url(form.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+.signup-box{
+    top:30%;
+    width:400px;
+    margin-left: 30%;
+    margin-top: 5%%;
+    background-color:white;
+    border-radius:3px;
+    height: 600px;
+}
+h1{
+    text-align:center;
+    padding-top:15px;
+}
+form label{
+    display:flex;
+    margin-top:20px;
+    font-size:18px;
+    margin-left: 10%;
+}
+form input{
+    width:80%;
+    padding:7px;
+    border:none;
+    border:1px solid gray;
+    border-radius:6px;
+    outline:none;
+    margin-left: 10%;
+}
+.cinput{
+    width:80%;
+    padding:7px;
+    margin-left: 10%;
+}
+input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    margin-top:15px;
+    border:none;
+    background-color:aqua;
+}
+    </style>
+<script>
+    function formValidation()
+    {
+    var a = document.registration.fname.value;
+    var c = document.registration.mail.value;
+    var d = document.registration.pass.value;
+    var e = document.registration.cpass.value;
+    var letters = /^[a-zA-Z\s]+$/
+    var numbers = /^[0-9]+$/
+    var upper = /^[A-Z]+$/
+    var lower = /^[a-z]+$/
+    var symbols = /^[$@#*&%]+$/
+    var flag = 0
+    if(a==""|| a=="null")
+    {
+    alert("please enter your name");
+    document.registration.a.focus();
+    return false;
+    }
+    else if(d==""|| d=="null")
+    {
+    alert("please enter your password");
+    document.registration.d.focus();
+    return false;
+    }
+    if(lower && upper && symbols)
+    {
+    flag=1
+    }
+   if(flag==0)
+    {
+    alert("please enter password correctly it should contain atleast one upper case letter,lower case letter ,special symbol and a number");
+    document.registration.d.focus();
+    return false;
+    }
+   if(e==""|| e=="null")
+    {
+    alert("please enter your password");
+    document.registration.e.focus();
+    return false;
+    }
+    if(lower && upper && symbols)
+    {
+    flag=1
+    }
+     if(flag==0)
+    {
+    alert("please enter password correctly it should contain atleast one upper case letter,lower case letter ,special symbol and a number");
+    document.registration.e.focus();
+    return false;
+    }
+     if(c==""|| c=="null")
+    {
+    alert("please enter your mail");
+    document.registration.c.focus();
+    return false;
+    }
+    var atpos = c.indexOf("@");
+    var dotpos = c.lastIndexOf(".");
+    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= c.length)
+    {
+    alert("Not a valid e-mail address");
+    document.registration.c.focus();
+    return false;
+    }
+    if(document.registration.pass.value!=document.registration.cpass.value){
+alert("New Password and Confirm Password should be same! Re-enter confirm-password!");
+document.Sregistration.cpass.value="";
+return false;
+}
+    alert("registration is successful");
+    return true;
+    }
+    </script>
+</head>    
+<body>
+        <form name="registration" action="signup.jsp" onsubmit="return formValidation();">
+    <div class="signup-box">
+    <h1> Sign Up form</h1>
+    <label>First Name</label>
+    <input type="text" class="input-box" placeholder="enter your first name" name="fname">
+    <label>Last Name</label>
+    <input type="text" class="input-box" placeholder="enter your last name" name="lname">
+    <label>Email</label>
+    <input type="email" class="input-box" placeholder="enter your mail" name="mail">
+    <label>Password</label>
+    <input type="password" class="input-box" placeholder="enter your password" name="pass">
+    <label>Confirm Password</label>
+    <input type="password" class="input-box" placeholder="enter your password" name="cpass">
+   <a href="home2.html"><input type="submit" value="submit"></a>
+   <div class="cinput">
+   <a href="login.html">Already have an account</a></div>
+    </form>
+     </div>
+</body> 
+</html>

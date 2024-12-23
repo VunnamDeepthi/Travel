@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+li, a, button{
+    font-family:"Montserrat",sans-serif;
+    font-weight:500;
+    font-size:16px;
+    color:darkblue;
+    text-decoration:none;
+}
+header{
+    width:100%;
+    height: 70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px 10%;
+    background-color:darkgray;
+}
+body{
+    background-image:url(https://www.incimages.com/uploaded_files/image/1920x1080/getty_583734066_335273.jpg);
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+    background-size:cover;
+    background-position: center;
+}
+.logo{
+    cursor:pointer;
+    color:darkblue;
+    font-size:40px;
+    display:flex;
+}
+.nav_links{
+    list-style:none;
+}
+.nav_links li{
+    display:inline-block;
+    padding:0px 10px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    padding:10px 10px;
+}
+button{
+         background-color:rgba(0,136,169,1);
+         cursor:pointer;
+         border:none;
+         border-radius:50px;
+         transition:all 0.3s ease 0s;
+         padding:9px 15px;
+}
+button:hover{
+
+    background-color:orange;
+}
+nav a:hover{
+    background-color:coral;
+}
+.places{
+    display:flex;
+    justify-content: space-evenly;
+}
+.places img{
+    width:360px;
+    height:400px;
+
+}
+.travel{
+    position:absolute;
+    top:40%;
+    left:20%;
+    width:60%;
+    text-align:center;
+    color:darkblue;
+    font: size 3rem;
+}
+</style>
+</head>
+<body>
+        <header>
+            <div class="logo">
+                <p>EXPLORE</p>
+            </div>
+            <nav class="nav_links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destinations.html"> Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pack.html">Packages</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+        </header>
+        <div class="travel">
+        <h1>LET'S MAKE A BEAUTIFUL TOUR,WELCOME TO EXPLORE</h1>
+        <br><br><h2>Travel to the every corner of the world,without travelling in a circle</h2>
+         <br><br>
+       <a href="index.html"><button style="align-items: center;">EXPLORE</button></a>
+        </div>
+    </body>
+</html>
